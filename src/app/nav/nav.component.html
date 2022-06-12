@@ -1,0 +1,58 @@
+<!--Accesibilidad-->
+<!--NavBar-->
+<nav class="navbar navbar-expand navbar-dark bg-primary">
+  <a routerLink="/home" class="navbar-brand">Erasmus+</a>
+  <ul class="navbar-nav mr-auto" routerLinkActive="active">
+
+
+
+    <li class="nav-item">
+      <a routerLink="/informacion_rabida" class="nav-link">IES La Rabida</a>
+    </li>
+    <li class="nav-item">
+      <a routerLink="/informacion_carlomaria" class="nav-link">Carlo Mª Carofa </a>
+    </li>
+    <li class="nav-item">
+      <a routerLink="/home" class="nav-link">IES La Rabida Blog </a>
+    </li>
+    <li class="nav-item">
+      <a routerLink="/home" class="nav-link">Carlo Mª Carofa Blog </a>
+    </li>
+    <li class="nav-item">
+      <a routerLink="/contacto" class="nav-link">Contacto </a>
+    </li>
+
+
+
+
+
+    <li class="nav-item" *ngIf="showAdminBoard">
+      <a href="/admin" class="nav-link" routerLink="admin">Admin Board</a>
+    </li>
+    <li class="nav-item" *ngIf="showModeratorBoard">
+      <a href="/mod" class="nav-link" routerLink="mod">Moderator Board</a>
+    </li>
+    <li class="nav-item">
+      <a routerLink="/tutoriales" class="nav-link" *ngIf="isLoggedIn">CRUD de imagenes</a>
+    </li>
+    <li class="nav-item">
+      <a routerLink="/agregar" class="nav-link" *ngIf="isLoggedIn">Agregar</a>
+    </li>
+  </ul>
+  <ul class="navbar-nav ml-auto" *ngIf="!isLoggedIn">
+    <li class="nav-item">
+      <a class="nav-link" routerLink="/register">Sign Up</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" routerLink="/login">Login</a>
+    </li>
+  </ul>
+  <ul class="navbar-nav ml-auto" *ngIf="isLoggedIn">
+    <li class="nav-item">
+      <a href="/profile" class="nav-link" routerLink="profile">{{ username }}</a>
+    </li>
+    <li class="nav-item">
+      <a href class="nav-link" (click)="logout()">LogOut</a>
+    </li>
+  </ul>
+</nav>
