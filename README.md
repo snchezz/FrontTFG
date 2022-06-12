@@ -1,13 +1,6 @@
-# Angular app that uses Flickr API to search for photos
+# Angular Blog Web Erasmus+
 
-This is an Angular project showcasing a simple photo lookup using a public Flickr API.
-
-![](demo.gif)
-
-
-More information about Flickr API:
-
-https://www.flickr.com/services/api/
+This is an Angular project for the TFG of DAM
 
 ## Installation
 
@@ -28,3 +21,6 @@ ng serve
 
 Then open your browser and go to:
 http://localhost:4200/
+
+
+meterle en xampp mysql los comandos de lso roles
