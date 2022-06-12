@@ -21,6 +21,7 @@ import { FooterComponent } from './footer/footer.component';
 import { InforabidaComponent } from './inforabida/inforabida.component';
 import { InfocarlomariaComponent } from './infocarlomaria/infocarlomaria.component';
 import { ContactoComponent } from './contacto/contacto.component';
+import { BlogComponent } from './blog/blog.component';
 
 
 @NgModule({
@@ -39,7 +40,8 @@ import { ContactoComponent } from './contacto/contacto.component';
     FooterComponent,
     InforabidaComponent,
     InfocarlomariaComponent,
-    ContactoComponent
+    ContactoComponent,
+    BlogComponent
   ],
   imports: [
     BrowserModule,

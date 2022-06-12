@@ -12,6 +12,7 @@ import { HomeComponent } from './home/home.component';
 import { InforabidaComponent } from './inforabida/inforabida.component';
 import { InfocarlomariaComponent } from './infocarlomaria/infocarlomaria.component';
 import { ContactoComponent } from './contacto/contacto.component';
+import { BlogComponent } from './blog/blog.component';
 
 
 const routes: Routes = [
@@ -19,10 +20,11 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
   { path: 'profile', component: ProfileComponent },
+  { path: 'blog', component: BlogComponent },
   { path: 'mod', component: BoardModeratorComponent },
   { path: 'admin', component: BoardAdminComponent },
-  { path: 'tutoriales', component: ListaTutorialesComponent },
-  { path: 'tutoriales/:id', component: TutorialDetallesComponent },
+  { path: 'entradas', component: ListaTutorialesComponent },
+  { path: 'entradas/:id', component: TutorialDetallesComponent },
   { path: 'agregar', component: AgregarTutorialComponent },
   
   { path: 'informacion_rabida', component: InforabidaComponent },

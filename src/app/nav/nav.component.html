@@ -13,46 +13,33 @@
       <a routerLink="/informacion_carlomaria" class="nav-link">Carlo Mª Carofa </a>
     </li>
     <li class="nav-item">
-      <a routerLink="/home" class="nav-link">IES La Rabida Blog </a>
-    </li>
-    <li class="nav-item">
-      <a routerLink="/home" class="nav-link">Carlo Mª Carofa Blog </a>
+      <a routerLink="/blog" class="nav-link">Erasmus Blog </a>
     </li>
     <li class="nav-item">
       <a routerLink="/contacto" class="nav-link">Contacto </a>
     </li>
 
-
-
-
-
     <li class="nav-item" *ngIf="showAdminBoard">
-      <a href="/admin" class="nav-link" routerLink="admin">Admin Board</a>
-    </li>
-    <li class="nav-item" *ngIf="showModeratorBoard">
-      <a href="/mod" class="nav-link" routerLink="mod">Moderator Board</a>
+      <a class="nav-link yellow" routerLink="/register">Registrar Alumno</a>
     </li>
     <li class="nav-item">
-      <a routerLink="/tutoriales" class="nav-link" *ngIf="isLoggedIn">CRUD de imagenes</a>
+      <a routerLink="/entradas" class="nav-link yellow" *ngIf="showAdminBoard">Administrar Entrada</a>
     </li>
     <li class="nav-item">
-      <a routerLink="/agregar" class="nav-link" *ngIf="isLoggedIn">Agregar</a>
+      <a routerLink="/agregar" class="nav-link yellow" *ngIf="showAdminBoard">Agregar Entrada</a>
     </li>
   </ul>
   <ul class="navbar-nav ml-auto" *ngIf="!isLoggedIn">
     <li class="nav-item">
-      <a class="nav-link" routerLink="/register">Sign Up</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" routerLink="/login">Login</a>
+      <a class="nav-link" routerLink="/login">Iniciar Sesion</a>
     </li>
   </ul>
   <ul class="navbar-nav ml-auto" *ngIf="isLoggedIn">
     <li class="nav-item">
-      <a href="/profile" class="nav-link" routerLink="profile">{{ username }}</a>
+      <a class="nav-link" routerLink="/profile">{{ username }}</a>
     </li>
     <li class="nav-item">
-      <a href class="nav-link" (click)="logout()">LogOut</a>
+      <a href class="nav-link" (click)="logout()">Cerrar Sesion</a>
     </li>
   </ul>
 </nav>

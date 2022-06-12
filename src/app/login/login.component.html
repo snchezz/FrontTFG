@@ -44,13 +44,11 @@
       Logged como {{ roles }}.
     </div>
 
-<div>
-  <a id="web" routerLink="/contacto">¿No recuerdas tus datos?</a>
-</div>
-
-    <div id="espacio">
-
+    <div *ngIf="!isLoggedIn">
+      <a id="web" routerLink="/contacto">¿No recuerdas tus datos?</a>
     </div>
+
+    <div id="espacio"> </div>
 
     <br><br><br><br><br><br>
   </div>
